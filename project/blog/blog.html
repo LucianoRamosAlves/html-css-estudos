@@ -1,70 +1,1878 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+
+<html lang="pt-BR">
 
 <head>
+
+    <!-- Define a codificação dos caracteres da página -->
     <meta charset="UTF-8">
+
+    <!-- Faz a página se adaptar corretamente a celulares e tablets -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minhas metas</title>
+
+    <!-- Descrição utilizada por mecanismos de pesquisa -->
+    <meta name="description"
+        content="Blog pessoal sobre minha trajetória nos estudos de Python, HTML, CSS, Flask e desenvolvimento web.">
+
+    <meta name="author" content="Futuro Dev">
+
+    <meta name="keywords" content="programação, Python, HTML, CSS, Flask, SQLAlchemy, Git, estudos">
+
+    <!-- Exemplo de favicon -->
+    <link rel="icon" href="assets/img/favicon.ico">
+
+    <title>O Código em Mim | Diário de Programação</title>
+
 </head>
 
 <body>
-    <img src="../../../../../../Downloads/nopixelzone-school-7421663.svg"
-        alt="logo da minhas metas, que é uma lupa com chapel de formatura">
 
-    <ul>
-        <li><a href="#">curso html</a></li>
+    <!--
+        Este link ajuda usuários de teclado e leitores de tela
+        a pularem diretamente para o conteúdo principal.
+    -->
+    <a href="#conteudo-principal">
+        Pular para o conteúdo principal
+    </a>
 
-        <li><a href="">curso css</a></li>
+    <!-- ==================================================
+         CABEÇALHO PRINCIPAL
+    =================================================== -->
 
-        <li><a href="#">curso javascript</a></li>
+    <header id="inicio">
 
-        <li><a href="#">curso python</a></li>
+        <!--
+            O elemento picture permite fornecer imagens diferentes
+            dependendo do tamanho da tela.
+        -->
+        <picture>
 
-        <li><a href="#">outros</a>
+            <source media="(min-width: 650px)" srcset="assets/img/logo-grande.svg">
+
+            <img src="assets/img/logo-padrao.svg" alt="Logotipo do blog O Código em Mim" width="100" height="100">
+
+        </picture>
+
+        <!-- Deve existir apenas um título principal da página -->
+        <h1>O Código em Mim</h1>
+
+        <p>
+            Registrando cada <em>bug</em>,
+            cada <strong>descoberta</strong>
+            e cada solução.
+        </p>
+
+        <p>
+            Última atualização:
+            <time datetime="2026-08-05T22:25:00-03:00">
+                5 de agosto de 2026, às 22h25
+            </time>
+        </p>
+
+        <!-- ==================================================
+             NAVEGAÇÃO PRINCIPAL
+        =================================================== -->
+
+        <nav aria-label="Navegação principal">
 
             <ul>
-                <li><a href="#">curso flask</a></li>
 
-                <li><a href="#">curso fastapi</a></li>
+                <li>
+                    <a href="#sobre">Sobre mim</a>
+                </li>
 
-                <li><a href="#">curso git</a></li>
+                <li>
+                    <a href="#trajetoria">Minha trajetória</a>
+                </li>
 
-                <li><a href="#">curso django</a></li>
+                <li>
+                    <a href="#tecnologias">Tecnologias</a>
+                </li>
 
-                <li><a href="#">curso github</a></li>
+                <li>
+                    <a href="#artigos">Meus artigos</a>
+                </li>
 
-                <li><a href="#">curso react</a></li>
+                <li>
+                    <a href="#projetos">Projetos</a>
+                </li>
 
-                <li><a href="#">curso typescript</a></li>
+                <li>
+                    <a href="#metas">Metas</a>
+                </li>
 
-                <li><a href="#">curso informática</a></li>
+                <li>
+                    <a href="#multimidia">Multimídia</a>
+                </li>
+
+                <li>
+                    <a href="#voos">Buscar voos</a>
+                </li>
+
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+
+                <li>
+                    <a href="#faq">Perguntas frequentes</a>
+                </li>
+
             </ul>
-        </li>
-    </ul>
 
+        </nav>
 
-    <li><a href="#">quem somos</a></li>
+    </header>
 
-    <li><a href="#">Blog</a></li>
+    <!-- ==================================================
+         CONTEÚDO PRINCIPAL
+    =================================================== -->
 
-    <li><a href="#">contato</a>
-    
+    <main id="conteudo-principal">
+
+        <!-- ==================================================
+             SEÇÃO SOBRE MIM
+        =================================================== -->
+
+        <section id="sobre">
+
+            <header>
+
+                <h2>Quem sou eu</h2>
+
+                <p>
+                    Uma pequena apresentação da pessoa por trás do código.
+                </p>
+
+            </header>
+
+            <figure>
+
+                <img src="assets/img/perfil.jpg" alt="Foto de perfil do autor do blog" width="300" height="300"
+                    loading="lazy">
+
+                <figcaption>
+                    Estudando programação e construindo projetos na prática.
+                </figcaption>
+
+            </figure>
+
+            <p>
+                Olá! Sou um aspirante a desenvolvedor e comecei minha jornada
+                de estudos em
+                <time datetime="2026-08-01">
+                    1º de agosto de 2026
+                </time>.
+            </p>
+
+            <p>
+                Meu foco atual é dominar
+                <abbr title="HyperText Markup Language">HTML</abbr>,
+                <abbr title="Cascading Style Sheets">CSS</abbr>,
+                Python e Flask.
+            </p>
+
+            <p>
+                Estou aprendendo principalmente por meio de
+                <strong>projetos práticos</strong>.
+                Para mim, programar não é apenas memorizar comandos:
+                é aprender a <em>resolver problemas</em>.
+            </p>
+
+            <!--
+                A tag b chama atenção visualmente.
+                A tag strong indica importância semântica.
+            -->
+            <p>
+                Meu objetivo é me tornar um
+                <b>desenvolvedor full stack</b>,
+                mas minha prioridade atual é
+                <strong>construir uma base sólida</strong>.
+            </p>
+
+            <!--
+                Mark representa um trecho relevante no contexto atual.
+            -->
+            <p>
+                Neste momento, estou estudando
+                <mark>HTML semântico e integração com Flask</mark>.
+            </p>
+
+            <p>
+                Antes eu pensava que bastava criar páginas.
+                <del>Hoje quero somente aprender a aparência dos sites.</del>
+                <ins>
+                    Agora quero entender estrutura, acessibilidade,
+                    banco de dados e lógica de programação.
+                </ins>
+            </p>
+
+            <!--
+                s representa algo que não é mais verdadeiro,
+                mas que não é necessariamente uma edição do texto.
+            -->
+            <p>
+                <s>Meu projeto ainda está apenas no planejamento.</s>
+                Atualmente, várias partes do sistema de passagens já funcionam.
+            </p>
+
+            <blockquote>
+
+                <p>
+                    “Cada erro que consigo entender se transforma
+                    em uma nova ferramenta para resolver problemas.”
+                </p>
+
+                <footer>
+                    <cite>Reflexão do autor do blog</cite>
+                </footer>
+
+            </blockquote>
+
+            <h3>Minhas habilidades atuais</h3>
+
+            <!--
+                dl cria uma lista de descrição.
+                dt representa o termo.
+                dd representa sua descrição.
+            -->
+            <dl>
+
+                <dt>HTML5</dt>
+
+                <dd>
+                    Estruturação semântica de páginas web,
+                    formulários, tabelas e elementos de mídia.
+                </dd>
+
+                <dt>CSS3</dt>
+
+                <dd>
+                    Estilização, Flexbox, responsividade e organização visual.
+                </dd>
+
+                <dt>Python</dt>
+
+                <dd>
+                    Variáveis, condições, repetições, funções,
+                    classes e desenvolvimento web.
+                </dd>
+
+                <dt>Flask</dt>
+
+                <dd>
+                    Rotas, templates, sessões, autenticação
+                    e integração com banco de dados.
+                </dd>
+
+            </dl>
+
+            <h3>Curiosidades rápidas</h3>
+
+            <ul>
+
+                <li>
+                    Tecnologia favorita atualmente:
+                    <data value="python">Python</data>
+                </li>
+
+                <li>
+                    Projeto principal:
+                    <data value="projeto-001">
+                        Sistema de passagens aéreas
+                    </data>
+                </li>
+
+                <li>
+                    Área de interesse:
+                    desenvolvimento back-end
+                </li>
+
+            </ul>
+
+            <small>
+                As informações deste blog representam minha evolução
+                durante os estudos e podem mudar com o tempo.
+            </small>
+
+        </section>
+
+        <hr>
+
+        <!-- ==================================================
+             MINHA TRAJETÓRIA
+        =================================================== -->
+
+        <section id="trajetoria">
+
+            <header>
+
+                <h2>Minha trajetória na programação</h2>
+
+                <p>
+                    Uma linha do tempo sobre minha evolução como estudante.
+                </p>
+
+            </header>
+
+            <article>
+
+                <header>
+
+                    <h3>Primeiro contato com Python</h3>
+
+                    <time datetime="2026-01">
+                        Janeiro de 2026
+                    </time>
+
+                </header>
+
+                <p>
+                    Comecei aprendendo variáveis, operadores,
+                    estruturas condicionais e repetições.
+                </p>
+
+                <pre><code>nome = "Futuro Dev"
+idade = 20
+
+if idade &gt;= 18:
+    print(f"{nome} pode continuar os estudos.")</code></pre>
+
+                <p>
+                    Saída exibida pelo programa:
+                    <samp>Futuro Dev pode continuar os estudos.</samp>
+                </p>
+
+            </article>
+
+            <article>
+
+                <header>
+
+                    <h3>Descobrindo o desenvolvimento web</h3>
+
+                    <time datetime="2026-03">
+                        Março de 2026
+                    </time>
+
+                </header>
+
+                <p>
+                    Aprendi que o navegador recebe um documento HTML
+                    e interpreta sua estrutura para montar a página.
+                </p>
+
+                <p>
+                    Também descobri que
+                    <dfn>HTML semântico</dfn>
+                    é o uso de elementos que descrevem o significado
+                    do conteúdo.
+                </p>
+
+            </article>
+
+            <article>
+
+                <header>
+
+                    <h3>Primeiro projeto com Flask</h3>
+
+                    <time datetime="2026-05">
+                        Maio de 2026
+                    </time>
+
+                </header>
+
+                <p>
+                    Criei minhas primeiras rotas e comecei
+                    a enviar informações do Python para templates HTML.
+                </p>
+
+                <pre><code>from flask import Flask, render_template
+
+app = Flask(__name__)
+
+@app.route("/")
+def inicio():
+    return render_template("index.html")</code></pre>
+
+            </article>
+
+            <article>
+
+                <header>
+
+                    <h3>Sistema de passagens aéreas</h3>
+
+                    <time datetime="2026-08">
+                        Agosto de 2026
+                    </time>
+
+                </header>
+
+                <p>
+                    Passei a desenvolver uma aplicação mais completa,
+                    com usuários, voos, classes, assentos,
+                    pagamento fictício e passagens.
+                </p>
+
+            </article>
+
+        </section>
+
+        <hr>
+
+        <!-- ==================================================
+             TECNOLOGIAS
+        =================================================== -->
+
+        <section id="tecnologias">
+
+            <header>
+
+                <h2>Tecnologias que estou estudando</h2>
+
+                <p>
+                    Cada tecnologia possui um papel diferente
+                    dentro dos meus projetos.
+                </p>
+
+            </header>
+
+            <article data-tecnologia="python" data-nivel="intermediario">
+
+                <h3>Python</h3>
+
+                <p>
+                    Linguagem utilizada na lógica e no back-end da aplicação.
+                </p>
+
+                <label for="progresso-python">
+                    Progresso em Python:
+                </label>
+
+                <progress id="progresso-python" value="65" max="100">
+                    65%
+                </progress>
+
+                <p>
+                    Nível atual:
+                    <meter value="0.65" min="0" max="1" low="0.3" high="0.7" optimum="1">
+                        65%
+                    </meter>
+                </p>
+
+            </article>
+
+            <article data-tecnologia="html" data-nivel="iniciante">
+
+                <h3>HTML</h3>
+
+                <p>
+                    Linguagem de marcação responsável
+                    pela estrutura e pelo significado da página.
+                </p>
+
+                <label for="progresso-html">
+                    Progresso em HTML:
+                </label>
+
+                <progress id="progresso-html" value="80" max="100">
+                    80%
+                </progress>
+
+            </article>
+
+            <article data-tecnologia="css" data-nivel="iniciante">
+
+                <h3>CSS</h3>
+
+                <p>
+                    Linguagem utilizada para cores, espaçamentos,
+                    alinhamentos e layouts.
+                </p>
+
+                <pre><code>.cartao {
+    display: flex;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}</code></pre>
+
+            </article>
+
+            <article data-tecnologia="flask" data-nivel="iniciante">
+
+                <h3>Flask</h3>
+
+                <p>
+                    Framework web utilizado para criar rotas,
+                    processar formulários e conversar com o banco de dados.
+                </p>
+
+                <details>
+
+                    <summary>
+                        Ver conceitos que estou estudando em Flask
+                    </summary>
+
+                    <ul>
+
+                        <li>Rotas</li>
+
+                        <li>Blueprints</li>
+
+                        <li>Templates Jinja</li>
+
+                        <li>Sessões</li>
+
+                        <li>Flask-Login</li>
+
+                        <li>SQLAlchemy</li>
+
+                    </ul>
+
+                </details>
+
+            </article>
+
+            <article data-tecnologia="git" data-nivel="iniciante">
+
+                <h3>Git e GitHub</h3>
+
+                <p>
+                    Utilizo o Git para registrar versões dos projetos.
+                </p>
+
+                <p>
+                    Para salvar uma alteração, posso digitar:
+                </p>
+
+                <p>
+                    <kbd>git add .</kbd>
+                </p>
+
+                <p>
+                    Em seguida:
+                </p>
+
+                <p>
+                    <kbd>git commit -m "Adiciona página inicial"</kbd>
+                </p>
+
+            </article>
+
+        </section>
+
+        <hr>
+
+        <!-- ==================================================
+             ARTIGOS DO BLOG
+        =================================================== -->
+
+        <section id="artigos">
+
+            <header>
+
+                <h2>Blog de estudos</h2>
+
+                <p>
+                    Registros das minhas principais descobertas.
+                </p>
+
+            </header>
+
+            <article>
+
+                <header>
+
+                    <h3>Tags de texto avançadas</h3>
+
+                    <p>
+                        Publicado por
+                    <address>
+                        Futuro Dev
+                    </address>
+                    </p>
+
+                    <p>
+                        Postado em
+                        <time datetime="2026-08-05T21:00:00-03:00">
+                            5 de agosto de 2026, às 21h
+                        </time>
+                    </p>
+
+                </header>
+
+                <p>
+                    Hoje descobri que o HTML possui elementos
+                    para representar diferentes tipos de conteúdo.
+                </p>
+
+                <p>
+                    Posso escrever x<sup>2</sup>
+                    ou a fórmula da água, H<sub>2</sub>O.
+                </p>
+
+                <p>
+                    Quando preciso mostrar atalhos,
+                    posso usar <kbd>Ctrl</kbd> + <kbd>C</kbd>.
+                </p>
+
+                <p>
+                    Para representar uma variável matemática,
+                    posso utilizar <var>x</var>.
+                </p>
+
+                <details>
+
+                    <summary>
+                        Ver um exemplo de código JavaScript
+                    </summary>
+
+                    <pre><code>function olaMundo() {
+    console.log("Olá, Mundo!");
+}</code></pre>
+
+                </details>
+
+                <footer>
+
+                    <p>
+                        Categorias:
+                        <a href="#tecnologias">HTML</a>,
+                        <a href="#artigos">Estudos</a>
+                    </p>
+
+                </footer>
+
+            </article>
+
+            <article>
+
+                <header>
+
+                    <h3>Entendendo como Flask atualiza uma página</h3>
+
+                    <p>
+                        Postado em
+                        <time datetime="2026-08-06">
+                            6 de agosto de 2026
+                        </time>
+                    </p>
+
+                </header>
+
+                <p>
+                    Quando um formulário é enviado, o navegador faz
+                    uma requisição para o servidor.
+                </p>
+
+                <ol>
+
+                    <li>O usuário preenche o formulário.</li>
+
+                    <li>O navegador envia os dados.</li>
+
+                    <li>O Flask recebe a requisição.</li>
+
+                    <li>O Python processa os dados.</li>
+
+                    <li>O Flask devolve uma nova resposta HTML.</li>
+
+                </ol>
+
+            </article>
+
+        </section>
+
+        <hr>
+
+        <!-- ==================================================
+             PROJETOS
+        =================================================== -->
+
+        <section id="projetos">
+
+            <header>
+
+                <h2>Meus projetos</h2>
+
+                <p>
+                    Projetos que utilizo para aprender programação na prática.
+                </p>
+
+            </header>
+
+            <article data-projeto-id="1">
+
+                <header>
+
+                    <h3>Sistema de passagens aéreas</h3>
+
+                    <p>
+                        Versão:
+                        <data value="0.8.0">0.8.0</data>
+                    </p>
+
+                </header>
+
+                <figure>
+
+                    <img src="assets/img/sistema-passagens.jpg"
+                        alt="Tela fictícia do sistema de compra de passagens aéreas" width="600" height="350"
+                        loading="lazy">
+
+                    <figcaption>
+                        Página de seleção de voos do projeto.
+                    </figcaption>
+
+                </figure>
+
+                <p>
+                    Aplicação web desenvolvida com Python,
+                    Flask, HTML, CSS, Jinja e SQLAlchemy.
+                </p>
+
+                <h4>Funcionalidades implementadas</h4>
+
+                <ul>
+
+                    <li>Cadastro e login de usuários</li>
+
+                    <li>Escolha do tipo de viagem</li>
+
+                    <li>Escolha do voo de ida</li>
+
+                    <li>Escolha do voo de volta</li>
+
+                    <li>Seleção de classe</li>
+
+                    <li>Escolha de assento</li>
+
+                    <li>Revisão da compra</li>
+
+                    <li>Pagamento fictício</li>
+
+                </ul>
+
+                <h4>Próximas funcionalidades</h4>
+
+                <ol>
+
+                    <li>Salvar a passagem definitivamente no banco</li>
+
+                    <li>Finalizar a área de suporte</li>
+
+                    <li>Criar o painel administrativo</li>
+
+                    <li>Gerar um código QR para a passagem</li>
+
+                </ol>
+
+                <details>
+
+                    <summary>
+                        Ver estrutura dos relacionamentos
+                    </summary>
+
+                    <dl>
+
+                        <dt>Usuário</dt>
+
+                        <dd>
+                            Pode possuir várias passagens.
+                        </dd>
+
+                        <dt>Passagem</dt>
+
+                        <dd>
+                            Pertence a um usuário e está ligada a um voo.
+                        </dd>
+
+                        <dt>Voo</dt>
+
+                        <dd>
+                            Pode estar presente em várias passagens.
+                        </dd>
+
+                    </dl>
+
+                </details>
+
+                <footer>
+
+                    <p>
+                        Status:
+                        <strong>em desenvolvimento</strong>
+                    </p>
+
+                    <p>
+                        Iniciado em
+                        <time datetime="2026-04">
+                            abril de 2026
+                        </time>
+                    </p>
+
+                </footer>
+
+            </article>
+
+            <article data-projeto-id="2">
+
+                <h3>Calculadora em Python</h3>
+
+                <p>
+                    Projeto criado para praticar funções,
+                    operadores matemáticos e tratamento de erros.
+                </p>
+
+            </article>
+
+            <article data-projeto-id="3">
+
+                <h3>Lista de tarefas</h3>
+
+                <p>
+                    Projeto para praticar criação,
+                    atualização e remoção de dados.
+                </p>
+
+            </article>
+
+        </section>
+
+        <hr>
+
+        <!-- ==================================================
+             METAS E PROGRESSO
+        =================================================== -->
+
+        <section id="metas">
+
+            <header>
+
+                <h2>Minhas metas e progresso</h2>
+
+                <p>
+                    Meu planejamento de estudos para os próximos meses.
+                </p>
+
+            </header>
+
+            <p>
+                Progresso geral do curso de HTML:
+            </p>
+
+            <progress value="80" max="100">
+                80%
+            </progress>
+
+            <p>
+                Nível de energia para estudar hoje:
+            </p>
+
+            <meter value="0.9" min="0" max="1" low="0.3" high="0.7" optimum="0.8">
+                90%
+            </meter>
+
+            <!--
+                Tabelas devem representar dados tabulares.
+                Não devem ser utilizadas para construir o layout da página.
+            -->
+            <table>
+
+                <caption>
+                    Cronograma de estudos de 2026
+                </caption>
+
+                <!--
+                    colgroup permite agrupar colunas.
+                    A aparência poderá ser definida posteriormente no CSS.
+                -->
+                <colgroup>
+
+                    <col>
+
+                    <col>
+
+                    <col>
+
+                    <col>
+
+                </colgroup>
+
+                <thead>
+
+                    <tr>
+
+                        <th scope="col">Mês</th>
+
+                        <th scope="col">Tecnologia</th>
+
+                        <th scope="col">Horas</th>
+
+                        <th scope="col">Status</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <th scope="row">Agosto</th>
+
+                        <td>HTML5 e semântica</td>
+
+                        <td>40</td>
+
+                        <td>Em andamento</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th scope="row">Setembro</th>
+
+                        <td>CSS3 e layouts</td>
+
+                        <td>50</td>
+
+                        <td>Planejado</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <th scope="row" rowspan="2">
+                            Outubro
+                        </th>
+
+                        <td>JavaScript básico</td>
+
+                        <td>35</td>
+
+                        <td>Planejado</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>Manipulação do DOM</td>
+
+                        <td>25</td>
+
+                        <td>Planejado</td>
+
+                    </tr>
+
+                </tbody>
+
+                <tfoot>
+
+                    <tr>
+
+                        <th scope="row" colspan="2">
+                            Total de horas planejadas
+                        </th>
+
+                        <td>150</td>
+
+                        <td>
+                            Meta anual
+                        </td>
+
+                    </tr>
+
+                </tfoot>
+
+            </table>
+
+            <h3>Lista de metas</h3>
+
+            <ul>
+
+                <li>
+                    <input type="checkbox" id="meta-html" checked disabled>
+
+                    <label for="meta-html">
+                        Aprender a estrutura básica do HTML
+                    </label>
+                </li>
+
+                <li>
+                    <input type="checkbox" id="meta-semantica">
+
+                    <label for="meta-semantica">
+                        Dominar HTML semântico
+                    </label>
+                </li>
+
+                <li>
+                    <input type="checkbox" id="meta-passagens">
+
+                    <label for="meta-passagens">
+                        Concluir o sistema de passagens
+                    </label>
+                </li>
+
+                <li>
+                    <input type="checkbox" id="meta-javascript">
+
+                    <label for="meta-javascript">
+                        Começar os estudos de JavaScript
+                    </label>
+                </li>
+
+            </ul>
+
+        </section>
+
+        <hr>
+
+        <!-- ==================================================
+             GALERIA MULTIMÍDIA
+        =================================================== -->
+
+        <section id="multimidia">
+
+            <header>
+
+                <h2>Galeria multimídia</h2>
+
+                <p>
+                    Imagens, áudios e vídeos relacionados aos meus estudos.
+                </p>
+
+            </header>
+
+            <figure>
+
+                <img src="assets/img/meu-setup.jpg" alt="Mesa de estudos com notebook e materiais de programação"
+                    width="400" height="300" loading="lazy">
+
+                <figcaption>
+                    Meu ambiente de estudos.
+                </figcaption>
+
+            </figure>
+
+            <h3>Áudio para concentração</h3>
+
+            <audio controls>
+
+                <source src="assets/audio/lofi.mp3" type="audio/mpeg">
+
+                <source src="assets/audio/lofi.ogg" type="audio/ogg">
+
+                Seu navegador não suporta reprodução de áudio.
+
+            </audio>
+
+            <h3>Apresentação do meu projeto</h3>
+
+            <video controls width="600" poster="assets/img/capa-video.jpg">
+
+                <source src="assets/video/apresentacao.mp4" type="video/mp4">
+
+                <source src="assets/video/apresentacao.webm" type="video/webm">
+
+                <track src="assets/legendas/apresentacao-pt.vtt" kind="subtitles" srclang="pt-BR" label="Português"
+                    default>
+
+                Seu navegador não suporta reprodução de vídeo.
+
+            </video>
+
+            <h3>Tutorial favorito</h3>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="Tutorial em vídeo sobre programação" loading="lazy" allowfullscreen>
+            </iframe>
+
+        </section>
+
+        <hr>
+
+        <!-- ==================================================
+             BUSCA DE VOOS
+        =================================================== -->
+
+        <section id="voos">
+
+            <header>
+
+                <h2>Buscar um voo</h2>
+
+                <p>
+                    Exemplo de formulário que poderia ser integrado
+                    ao meu sistema Flask.
+                </p>
+
+            </header>
+
+            <form action="/buscar-voos" method="get">
+
+                <fieldset>
+
+                    <legend>
+                        Origem e destino
+                    </legend>
+
+                    <label for="origem">
+                        Digite a origem:
+                    </label>
+
+                    <input type="text" id="origem" name="origem" list="lista-origens" placeholder="Ex.: Campinas"
+                        required>
+
+                    <datalist id="lista-origens">
+
+                        <option value="Campinas - VCP">
+
+                        <option value="São Paulo - GRU">
+
+                        <option value="Rio de Janeiro - GIG">
+
+                        <option value="Brasília - BSB">
+
+                        <option value="Fortaleza - FOR">
+
+                    </datalist>
+
+                    <label for="destino">
+                        Digite o destino:
+                    </label>
+
+                    <input type="text" id="destino" name="destino" list="lista-destinos" placeholder="Ex.: Fortaleza"
+                        required>
+
+                    <datalist id="lista-destinos">
+
+                        <option value="Campinas - VCP">
+
+                        <option value="São Paulo - GRU">
+
+                        <option value="Rio de Janeiro - GIG">
+
+                        <option value="Brasília - BSB">
+
+                        <option value="Fortaleza - FOR">
+
+                    </datalist>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>
+                        Detalhes da viagem
+                    </legend>
+
+                    <label for="data-ida">
+                        Data de ida:
+                    </label>
+
+                    <input type="date" id="data-ida" name="data_ida" required>
+
+                    <label for="data-volta">
+                        Data de volta:
+                    </label>
+
+                    <input type="date" id="data-volta" name="data_volta">
+
+                    <label for="passageiros">
+                        Passageiros:
+                    </label>
+
+                    <input type="number" id="passageiros" name="passageiros" min="1" max="10" value="1" required>
+
+                    <label for="classe">
+                        Classe:
+                    </label>
+
+                    <select id="classe" name="classe" required>
+
+                        <option value="">
+                            Selecione uma classe
+                        </option>
+
+                        <option value="economica">
+                            Econômica
+                        </option>
+
+                        <option value="prata">
+                            Prata
+                        </option>
+
+                        <option value="executiva">
+                            Executiva
+                        </option>
+
+                    </select>
+
+                </fieldset>
+
+                <button type="submit">
+                    Buscar voos
+                </button>
+
+            </form>
+
+            <p>
+                O elemento <code>&lt;datalist&gt;</code>
+                mostra sugestões conforme o usuário digita.
+                Entretanto, o usuário ainda pode escrever um valor
+                que não esteja na lista.
+            </p>
+
+            <p>
+                Por isso, o Flask deve validar a origem e o destino
+                novamente no servidor.
+            </p>
+
+        </section>
+
+        <hr>
+
+        <!-- ==================================================
+             GLOSSÁRIO
+        =================================================== -->
+
+        <section id="glossario">
+
+            <header>
+
+                <h2>Glossário de programação</h2>
+
+            </header>
+
+            <dl>
+
+                <dt>Front-end</dt>
+
+                <dd>
+                    Parte visual da aplicação com a qual
+                    o usuário interage.
+                </dd>
+
+                <dt>Back-end</dt>
+
+                <dd>
+                    Parte responsável pela lógica,
+                    regras e acesso ao banco de dados.
+                </dd>
+
+                <dt>Framework</dt>
+
+                <dd>
+                    Conjunto de ferramentas e padrões
+                    que ajudam no desenvolvimento de uma aplicação.
+                </dd>
+
+                <dt>Rota</dt>
+
+                <dd>
+                    Endereço da aplicação associado
+                    a uma função no servidor.
+                </dd>
+
+                <dt>ORM</dt>
+
+                <dd>
+                    Ferramenta que permite trabalhar com tabelas
+                    do banco utilizando classes e objetos.
+                </dd>
+
+                <dt>Template</dt>
+
+                <dd>
+                    Arquivo HTML que pode receber dados do back-end.
+                </dd>
+
+            </dl>
+
+        </section>
+
+        <hr>
+
+        <!-- ==================================================
+             FORMULÁRIO DE CONTATO
+        =================================================== -->
+
+        <section id="contato">
+
+            <header>
+
+                <h2>Contato e feedback</h2>
+
+                <p>
+                    Formulário demonstrativo para praticar
+                    diferentes tipos de campos HTML.
+                </p>
+
+            </header>
+
+            <form action="/enviar-dados" method="post" enctype="multipart/form-data">
+
+                <!--
+                    Este valor não aparece na página,
+                    mas será enviado junto com o formulário.
+                -->
+                <input type="hidden" name="origem_formulario" value="blog">
+
+                <fieldset>
+
+                    <legend>
+                        Dados pessoais
+                    </legend>
+
+                    <label for="nome">
+                        Nome completo:
+                    </label>
+
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" minlength="3"
+                        maxlength="100" required autofocus autocomplete="name">
+
+                    <label for="email">
+                        E-mail:
+                    </label>
+
+                    <input type="email" id="email" name="email" placeholder="nome@exemplo.com" required
+                        autocomplete="email">
+
+                    <label for="senha">
+                        Senha de demonstração:
+                    </label>
+
+                    <input type="password" id="senha" name="senha" minlength="8" autocomplete="new-password">
+
+                    <label for="telefone">
+                        Telefone:
+                    </label>
+
+                    <input type="tel" id="telefone" name="telefone" placeholder="(99) 99999-9999" autocomplete="tel">
+
+                    <label for="nascimento">
+                        Data de nascimento:
+                    </label>
+
+                    <input type="date" id="nascimento" name="nascimento">
+
+                    <label for="site">
+                        Seu site ou portfólio:
+                    </label>
+
+                    <input type="url" id="site" name="site" placeholder="https://exemplo.com">
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>
+                        Sua opinião
+                    </legend>
+
+                    <label for="nota">
+                        Nota para o blog:
+                    </label>
+
+                    <input type="range" id="nota" name="nota" min="0" max="10" step="1" value="5">
+
+                    <!--
+                        Sem JavaScript, este output não será atualizado
+                        automaticamente conforme o range muda.
+                    -->
+                    <output for="nota">
+                        5
+                    </output>
+
+                    <p>
+                        Qual tecnologia você prefere?
+                    </p>
+
+                    <input type="radio" id="pref-html" name="preferencia" value="html" checked>
+
+                    <label for="pref-html">
+                        HTML
+                    </label>
+
+                    <input type="radio" id="pref-css" name="preferencia" value="css">
+
+                    <label for="pref-css">
+                        CSS
+                    </label>
+
+                    <input type="radio" id="pref-js" name="preferencia" value="javascript">
+
+                    <label for="pref-js">
+                        JavaScript
+                    </label>
+
+                    <p>
+                        Quais áreas você considera interessantes?
+                    </p>
+
+                    <input type="checkbox" id="area-front" name="areas" value="frontend">
+
+                    <label for="area-front">
+                        Front-end
+                    </label>
+
+                    <input type="checkbox" id="area-back" name="areas" value="backend">
+
+                    <label for="area-back">
+                        Back-end
+                    </label>
+
+                    <input type="checkbox" id="area-dados" name="areas" value="banco-de-dados">
+
+                    <label for="area-dados">
+                        Banco de dados
+                    </label>
+
+                    <label for="linguagem">
+                        Sugira uma linguagem:
+                    </label>
+
+                    <input type="text" list="linguagens" id="linguagem" name="linguagem"
+                        placeholder="Digite para buscar">
+
+                    <datalist id="linguagens">
+
+                        <option value="Python">
+
+                        <option value="Java">
+
+                        <option value="C#">
+
+                        <option value="PHP">
+
+                        <option value="Ruby">
+
+                    </datalist>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>
+                        Preferências de estudo
+                    </legend>
+
+                    <label for="horario-estudo">
+                        Horário favorito para estudar:
+                    </label>
+
+                    <input type="time" id="horario-estudo" name="horario_estudo">
+
+                    <label for="inicio-estudo">
+                        Data e horário de início:
+                    </label>
+
+                    <input type="datetime-local" id="inicio-estudo" name="inicio_estudo">
+
+                    <label for="mes-meta">
+                        Mês da próxima meta:
+                    </label>
+
+                    <input type="month" id="mes-meta" name="mes_meta">
+
+                    <label for="semana-estudo">
+                        Semana planejada:
+                    </label>
+
+                    <input type="week" id="semana-estudo" name="semana_estudo">
+
+                    <label for="cor-favorita">
+                        Cor favorita para o blog:
+                    </label>
+
+                    <input type="color" id="cor-favorita" name="cor_favorita" value="#3366ff">
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>
+                        Mensagem adicional
+                    </legend>
+
+                    <label for="motivo">
+                        Motivo do contato:
+                    </label>
+
+                    <select id="motivo" name="motivo" required>
+
+                        <option value="">
+                            Selecione um motivo
+                        </option>
+
+                        <optgroup label="Profissional">
+
+                            <option value="vaga">
+                                Oferta de vaga
+                            </option>
+
+                            <option value="freelance">
+                                Trabalho freelancer
+                            </option>
+
+                        </optgroup>
+
+                        <optgroup label="Pessoal">
+
+                            <option value="duvida">
+                                Dúvida
+                            </option>
+
+                            <option value="sugestao">
+                                Sugestão
+                            </option>
+
+                        </optgroup>
+
+                    </select>
+
+                    <label for="arquivo">
+                        Envie imagens:
+                    </label>
+
+                    <input type="file" id="arquivo" name="arquivos" accept="image/png, image/jpeg, image/webp" multiple>
+
+                    <label for="mensagem">
+                        Deixe sua mensagem:
+                    </label>
+
+                    <textarea id="mensagem" name="mensagem" rows="7" cols="50" minlength="10" maxlength="1000"
+                        placeholder="Escreva sua mensagem..." spellcheck="true" required></textarea>
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>
+                        Exemplos de estados dos campos
+                    </legend>
+
+                    <label for="codigo-usuario">
+                        Código do usuário:
+                    </label>
+
+                    <!--
+                        readonly permite foco e envia o valor.
+                    -->
+                    <input type="text" id="codigo-usuario" name="codigo_usuario" value="USR-0001" readonly>
+
+                    <label for="plano-indisponivel">
+                        Plano temporariamente indisponível:
+                    </label>
+
+                    <!--
+                        disabled impede interação e não envia o valor.
+                    -->
+                    <input type="text" id="plano-indisponivel" name="plano_indisponivel" value="Plano premium" disabled>
+
+                </fieldset>
+
+                <button type="submit">
+                    Enviar formulário
+                </button>
+
+                <button type="reset">
+                    Limpar campos
+                </button>
+
+            </form>
+
+        </section>
+
+        <hr>
+
+        <!-- ==================================================
+             DEMONSTRAÇÕES DE ELEMENTOS MENOS USADOS
+        =================================================== -->
+
+        <section id="demonstracoes">
+
+            <header>
+
+                <h2>Outros recursos do HTML</h2>
+
+            </header>
+
+            <h3>Entidades HTML</h3>
+
+            <p>
+                Para escrever uma tag como texto:
+                &lt;section&gt;
+            </p>
+
+            <p>
+                Símbolo de direitos autorais:
+                &copy;
+            </p>
+
+            <p>
+                Símbolo de marca registrada:
+                &reg;
+            </p>
+
+            <p>
+                E comercial:
+                &amp;
+            </p>
+
+            <h3>Quebra de palavras</h3>
+
+            <p>
+                Uma URL muito longa pode receber oportunidades
+                de quebra usando <code>&lt;wbr&gt;</code>:
+            </p>
+
+            <p>
+                https://meu-projeto.com/<wbr>
+                sistema-de-passagens/<wbr>
+                selecionar-voo/<wbr>
+                confirmar-pagamento
+            </p>
+
+            <h3>Texto bidirecional</h3>
+
+            <p>
+                Usuário:
+                <bdi>مطور</bdi>
+            </p>
+
+            <p>
+                Texto invertido propositalmente:
+                <bdo dir="rtl">
+                    Estudando HTML
+                </bdo>
+            </p>
+
+            <h3>Anotação editável</h3>
+
+            <p contenteditable="true" spellcheck="true" title="Este texto pode ser editado no navegador">
+                Clique neste texto e escreva uma anotação.
+            </p>
+
+            <p>
+                A alteração não será salva ao recarregar a página,
+                pois não existe JavaScript ou envio para o servidor.
+            </p>
+
+            <!--
+                O conteúdo com hidden existe no documento,
+                mas não aparece para o usuário.
+            -->
+            <p hidden>
+                Esta anotação está escondida usando o atributo hidden.
+            </p>
+
+        </section>
+
+        <hr>
+
+        <!-- ==================================================
+             FAQ
+        =================================================== -->
+
+        <section id="faq">
+
+            <header>
+
+                <h2>Perguntas frequentes</h2>
+
+            </header>
+
+            <details>
+
+                <summary>
+                    HTML é uma linguagem de programação?
+                </summary>
+
+                <p>
+                    Não. HTML é uma linguagem de marcação
+                    utilizada para estruturar conteúdo.
+                </p>
+
+            </details>
+
+            <details>
+
+                <summary>
+                    Qual é a diferença entre HTML e CSS?
+                </summary>
+
+                <p>
+                    O HTML define a estrutura e o significado.
+                    O CSS controla a apresentação visual.
+                </p>
+
+            </details>
+
+            <details>
+
+                <summary>
+                    O que é Flask?
+                </summary>
+
+                <p>
+                    Flask é um framework web para Python.
+                    Ele permite criar rotas, receber formulários,
+                    consultar bancos de dados e devolver páginas HTML.
+                </p>
+
+            </details>
+
+            <details>
+
+                <summary>
+                    Como o Flask envia dados para o HTML?
+                </summary>
+
+                <p>
+                    O Flask pode enviar variáveis para um template Jinja.
+                    O Jinja usa essas variáveis para gerar o HTML final.
+                </p>
+
+            </details>
+
+            <details>
+
+                <summary>
+                    Por que este blog não utiliza JavaScript?
+                </summary>
+
+                <p>
+                    Porque o objetivo atual é praticar HTML e CSS.
+                    Recursos dinâmicos poderão ser adicionados no futuro.
+                </p>
+
+            </details>
+
+        </section>
+
+    </main>
+
+    <!-- ==================================================
+         CONTEÚDO COMPLEMENTAR
+    =================================================== -->
+
+    <aside>
+
+        <h2>Links úteis</h2>
+
         <ul>
 
-            <li><a href="#">email</a></li>
+            <li>
+                <a href="https://developer.mozilla.org/pt-BR/" target="_blank" rel="noopener noreferrer">
+                    Estudar desenvolvimento web na MDN
+                </a>
+            </li>
 
-            <li><a href="#">telefone</a></li>
+            <li>
+                <a href="https://docs.python.org/pt-br/3/" target="_blank" rel="noopener noreferrer">
+                    Consultar a documentação do Python
+                </a>
+            </li>
 
-            <li><a href="#">whatsapp</a></li>
+            <li>
+                <a href="https://flask.palletsprojects.com/" target="_blank" rel="noopener noreferrer">
+                    Consultar a documentação do Flask
+                </a>
+            </li>
 
-            <li><a href="#">instagram</a></li>
-
-            <li><a href="#">facebook</a></li>
         </ul>
-    
-    </li>
 
+        <h3>Metas do mês</h3>
 
+        <ol>
+
+            <li>Finalizar a persistência das passagens</li>
+
+            <li>Melhorar a semântica dos templates</li>
+
+            <li>Estudar formulários HTML</li>
+
+            <li>Praticar relacionamentos no SQLAlchemy</li>
+
+        </ol>
+
+    </aside>
+
+    <hr>
+
+    <!-- ==================================================
+         RODAPÉ PRINCIPAL
+    =================================================== -->
+
+    <footer>
+
+        <nav aria-label="Navegação do rodapé">
+
+            <ul>
+
+                <li>
+                    <a href="#sobre">
+                        Sobre mim
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#projetos">
+                        Projetos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contato">
+                        Contato
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#faq">
+                        Perguntas frequentes
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <address>
+
+            Escrito por
+            <a href="mailto:meuemail@exemplo.com">
+                Futuro Dev
+            </a>.
+
+            <br>
+
+            Codó, Maranhão, Brasil.
+
+        </address>
+
+        <p>
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+                Meu perfil no GitHub
+            </a>
+        </p>
+
+        <p>
+            &copy; 2026 — O Código em Mim.
+            Todos os direitos reservados.
+        </p>
+
+        <p>
+            <a href="#inicio">
+                Voltar ao topo
+            </a>
+        </p>
+
+    </footer>
 
 </body>
 
