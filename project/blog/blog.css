@@ -1,47 +1,2682 @@
-:root{
-    /* CSS HEX */
---dusty-rose: #c97b84ff;
---terracotta-clay: #a85751ff;
---royal-plum: #7d2e68ff;
---dark-amethyst: #251351ff;
---prussian-blue: #040926ff;
+/* ============================================================
+   O CÓDIGO EM MIM
+   CSS DIDÁTICO / LABORATÓRIO DE ESTUDOS
 
-/* CSS HSL */
---dusty-rose: hsla(353, 42%, 64%, 1);
---terracotta-clay: hsla(4, 35%, 49%, 1);
---royal-plum: hsla(316, 46%, 34%, 1);
---dark-amethyst: hsla(257, 62%, 20%, 1);
---prussian-blue: hsla(231, 81%, 8%, 1);
+   Neste arquivo aparecem exemplos de:
 
-/* SCSS HEX */
---dusty-rose: #c97b84ff;
---royal-plum: #7d2e68ff;
---terracotta-clay: #a85751ff;
---dark-amethyst: #251351ff;
---prussian-blue: #040926ff;
+   ✓ Reset
+   ✓ Variáveis CSS
+   ✓ calc()
+   ✓ min()
+   ✓ max()
+   ✓ clamp()
+   ✓ Flexbox
+   ✓ CSS Grid
+   ✓ Subgrid fallback
+   ✓ Seletores de atributo
+   ✓ Seletores por data-*
+   ✓ :hover
+   ✓ :focus
+   ✓ :focus-visible
+   ✓ :active
+   ✓ :checked
+   ✓ :disabled
+   ✓ :read-only
+   ✓ :valid
+   ✓ :invalid
+   ✓ :placeholder-shown
+   ✓ :first-child
+   ✓ :last-child
+   ✓ :nth-child()
+   ✓ :not()
+   ✓ :is()
+   ✓ :where()
+   ✓ :has()
+   ✓ ::before
+   ✓ ::after
+   ✓ ::selection
+   ✓ ::marker
+   ✓ ::placeholder
+   ✓ Gradientes
+   ✓ Sombras
+   ✓ Transições
+   ✓ Transformações
+   ✓ Animações
+   ✓ @keyframes
+   ✓ position sticky
+   ✓ aspect-ratio
+   ✓ object-fit
+   ✓ filtros
+   ✓ backdrop-filter
+   ✓ scroll-behavior
+   ✓ scroll-margin
+   ✓ scroll-snap
+   ✓ accent-color
+   ✓ progress
+   ✓ meter
+   ✓ details/summary
+   ✓ tabelas
+   ✓ formulários
+   ✓ responsividade
+   ✓ container queries
+   ✓ @supports
+   ✓ prefers-reduced-motion
+   ✓ prefers-color-scheme
+   ✓ CSS para impressão
+============================================================ */
 
-/* SCSS HSL */
---dusty-rose: hsla(353, 42%, 64%, 1);
---terracotta-clay: hsla(4, 35%, 49%, 1);
---royal-plum: hsla(316, 46%, 34%, 1);
---dark-amethyst: hsla(257, 62%, 20%, 1);
---prussian-blue: hsla(231, 81%, 8%, 1);
 
-/* SCSS RGB *--
---dusty-rose: rgba(201, 123, 132, 1);
---terracotta-clay: rgba(168, 87, 81, 1);
---royal-plum: rgba(125, 46, 104, 1);
---dark-amethyst: rgba(37, 19, 81, 1);
---prussian-blue: rgba(4, 9, 38, 1);
+/* ============================================================
+   1. VARIÁVEIS CSS
+============================================================ */
 
-/* SCSS Gradient */
---gradient-top: linear-gradient(0deg, #c97b84ff, #a85751ff, #7d2e68ff, #251351ff, #040926ff);
---gradient-right: linear-gradient(90deg, #c97b84ff, #a85751ff, #7d2e68ff, #251351ff, #040926ff);
---gradient-bottom: linear-gradient(180deg, #c97b84ff, #a85751ff, #7d2e68ff, #251351ff, #040926ff);
---gradient-left: linear-gradient(270deg, #c97b84ff, #a85751ff, #7d2e68ff, #251351ff, #040926ff);
---gradient-top-right: linear-gradient(45deg, #c97b84ff, #a85751ff, #7d2e68ff, #251351ff, #040926ff);
---gradient-bottom-right: linear-gradient(135deg, #c97b84ff, #a85751ff, #7d2e68ff, #251351ff, #040926ff);
---gradient-top-left: linear-gradient(225deg, #c97b84ff, #a85751ff, #7d2e68ff, #251351ff, #040926ff);
---gradient-bottom-left: linear-gradient(315deg, #c97b84ff, #a85751ff, #7d2e68ff, #251351ff, #040926ff);
---gradient-radial: radial-gradient(#c97b84ff, #a85751ff, #7d2e68ff, #251351ff, #040926ff);
+:root {
+    /* Cores */
+    --cor-fundo: #f5f7fb;
+    --cor-superficie: #ffffff;
+    --cor-superficie-2: #eef2ff;
+
+    --cor-texto: #172033;
+    --cor-texto-suave: #677089;
+
+    --cor-primaria: #4f46e5;
+    --cor-primaria-clara: #818cf8;
+    --cor-secundaria: #06b6d4;
+
+    --cor-sucesso: #16a34a;
+    --cor-aviso: #f59e0b;
+    --cor-erro: #dc2626;
+
+    --cor-borda: #dce1eb;
+
+    /* Gradientes */
+    --gradiente-principal:
+        linear-gradient(
+            135deg,
+            #4338ca,
+            #6366f1 45%,
+            #06b6d4
+        );
+
+    --gradiente-suave:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #ecfeff
+        );
+
+    /* Tipografia */
+    --fonte-principal:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    --fonte-codigo:
+        "Cascadia Code",
+        "Fira Code",
+        Consolas,
+        monospace;
+
+    /* Espaçamentos */
+    --espaco-1: 0.25rem;
+    --espaco-2: 0.5rem;
+    --espaco-3: 0.75rem;
+    --espaco-4: 1rem;
+    --espaco-5: 1.5rem;
+    --espaco-6: 2rem;
+    --espaco-7: 3rem;
+    --espaco-8: 5rem;
+
+    /* Bordas */
+    --raio-pequeno: 0.5rem;
+    --raio-medio: 1rem;
+    --raio-grande: 1.5rem;
+
+    /* Sombras */
+    --sombra-pequena:
+        0 4px 12px rgb(15 23 42 / 0.06);
+
+    --sombra-media:
+        0 15px 35px rgb(15 23 42 / 0.10);
+
+    --sombra-grande:
+        0 30px 70px rgb(15 23 42 / 0.15);
+
+    /* Layout */
+    --largura-site: 75rem;
+
+    /* Transições */
+    --transicao:
+        180ms ease;
+}
+
+
+/* ============================================================
+   2. RESET BÁSICO
+============================================================ */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+
+    /*
+        Evita que títulos fiquem escondidos
+        atrás de elementos fixos/sticky.
+    */
+    scroll-padding-top: 2rem;
+}
+
+
+body {
+    margin: 0;
+
+    min-height: 100vh;
+
+    font-family: var(--fonte-principal);
+
+    color: var(--cor-texto);
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgb(99 102 241 / 0.12),
+            transparent 35rem
+        ),
+        var(--cor-fundo);
+
+    line-height: 1.7;
+
+    text-rendering: optimizeLegibility;
+}
+
+
+img,
+picture,
+video,
+iframe {
+    max-width: 100%;
+}
+
+
+img {
+    display: block;
+}
+
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+
+button,
+select {
+    cursor: pointer;
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+
+a {
+    color: var(--cor-primaria);
+}
+
+
+p {
+    max-width: 70ch;
+}
+
+
+/* ============================================================
+   3. SELEÇÃO DE TEXTO
+============================================================ */
+
+::selection {
+    color: white;
+    background: var(--cor-primaria);
+}
+
+
+/* ============================================================
+   4. BARRA DE ROLAGEM
+   Funciona principalmente em navegadores WebKit/Blink.
+============================================================ */
+
+::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #e8ebf2;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background:
+        linear-gradient(
+            var(--cor-primaria),
+            var(--cor-secundaria)
+        );
+
+    border-radius: 999px;
+
+    border: 3px solid #e8ebf2;
+}
+
+
+/* ============================================================
+   5. LINK "PULAR PARA O CONTEÚDO"
+============================================================ */
+
+body > a[href="#conteudo-principal"] {
+    position: fixed;
+
+    top: 1rem;
+    left: 1rem;
+
+    z-index: 9999;
+
+    padding: 0.8rem 1rem;
+
+    color: white;
+
+    background: var(--cor-texto);
+
+    border-radius: var(--raio-pequeno);
+
+    transform: translateY(-200%);
+
+    transition: transform var(--transicao);
+}
+
+
+body > a[href="#conteudo-principal"]:focus {
+    transform: translateY(0);
+}
+
+
+/* ============================================================
+   6. CABEÇALHO PRINCIPAL
+============================================================ */
+
+body > header {
+    position: relative;
+
+    overflow: hidden;
+
+    padding:
+        clamp(2rem, 6vw, 5rem)
+        max(1rem, calc((100vw - var(--largura-site)) / 2));
+
+    text-align: center;
+
+    color: white;
+
+    background: var(--gradiente-principal);
+
+    isolation: isolate;
+}
+
+
+/*
+    Pseudo-elementos servem para criar elementos visuais
+    sem adicionar HTML.
+*/
+
+body > header::before,
+body > header::after {
+    content: "";
+
+    position: absolute;
+
+    z-index: -1;
+
+    border-radius: 50%;
+
+    filter: blur(1px);
+}
+
+
+body > header::before {
+    width: 28rem;
+    height: 28rem;
+
+    top: -12rem;
+    right: -8rem;
+
+    background: rgb(255 255 255 / 0.12);
+}
+
+
+body > header::after {
+    width: 18rem;
+    height: 18rem;
+
+    bottom: -10rem;
+    left: -5rem;
+
+    background: rgb(6 182 212 / 0.35);
+}
+
+
+body > header picture img {
+    width: clamp(5rem, 10vw, 7rem);
+
+    margin-inline: auto;
+
+    filter:
+        drop-shadow(
+            0 1rem 1rem rgb(0 0 0 / 0.15)
+        );
+
+    transition:
+        transform 300ms ease,
+        filter 300ms ease;
+}
+
+
+body > header picture img:hover {
+    transform:
+        rotate(-5deg)
+        scale(1.08);
+
+    filter:
+        drop-shadow(
+            0 1.5rem 1.2rem rgb(0 0 0 / 0.25)
+        );
+}
+
+
+body > header h1 {
+    margin:
+        var(--espaco-4)
+        0
+        var(--espaco-2);
+
+    font-size:
+        clamp(
+            2.5rem,
+            8vw,
+            5.5rem
+        );
+
+    line-height: 0.95;
+
+    letter-spacing: -0.06em;
+
+    text-wrap: balance;
+}
+
+
+body > header > p {
+    margin-inline: auto;
+
+    color: rgb(255 255 255 / 0.85);
+}
+
+
+body > header em {
+    color: #cffafe;
+}
+
+
+body > header strong {
+    color: white;
+}
+
+
+/* ============================================================
+   7. NAVEGAÇÃO
+============================================================ */
+
+body > header nav {
+    margin-top: var(--espaco-6);
+
+    padding: var(--espaco-2);
+
+    background: rgb(255 255 255 / 0.12);
+
+    border:
+        1px solid
+        rgb(255 255 255 / 0.20);
+
+    border-radius: var(--raio-grande);
+
+    /*
+        Cria efeito de vidro.
+    */
+    backdrop-filter: blur(15px);
+}
+
+
+body > header nav ul {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: var(--espaco-2);
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+
+body > header nav a {
+    position: relative;
+
+    display: block;
+
+    padding: 0.65rem 0.9rem;
+
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 0.7rem;
+
+    transition:
+        color var(--transicao),
+        background var(--transicao),
+        transform var(--transicao);
+}
+
+
+body > header nav a:hover {
+    background: rgb(255 255 255 / 0.16);
+
+    transform: translateY(-2px);
+}
+
+
+/*
+    Linha animada abaixo do link.
+*/
+
+body > header nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0.2rem;
+
+    width: 0;
+    height: 2px;
+
+    background: white;
+
+    transform: translateX(-50%);
+
+    transition: width 250ms ease;
+}
+
+
+body > header nav a:hover::after {
+    width: 60%;
+}
+
+
+/* ============================================================
+   8. CONTEÚDO PRINCIPAL
+============================================================ */
+
+main {
+    width:
+        min(
+            calc(100% - 2rem),
+            var(--largura-site)
+        );
+
+    margin-inline: auto;
+
+    padding-block: var(--espaco-7);
+}
+
+
+/*
+    Todas as sections que forem filhas diretas de main.
+*/
+
+main > section {
+    position: relative;
+
+    padding:
+        clamp(
+            1.5rem,
+            4vw,
+            3rem
+        );
+
+    margin-bottom: var(--espaco-6);
+
+    background: var(--cor-superficie);
+
+    border:
+        1px solid
+        var(--cor-borda);
+
+    border-radius: var(--raio-grande);
+
+    box-shadow: var(--sombra-pequena);
+
+    /*
+        Permitirá usar @container mais abaixo.
+    */
+    container-type: inline-size;
+    container-name: secao;
+
+    scroll-margin-top: 2rem;
+
+    transition:
+        transform 250ms ease,
+        box-shadow 250ms ease,
+        border-color 250ms ease;
+}
+
+
+main > section:hover {
+    box-shadow: var(--sombra-media);
+
+    border-color:
+        color-mix(
+            in srgb,
+            var(--cor-primaria) 25%,
+            var(--cor-borda)
+        );
+}
+
+
+/* ============================================================
+   9. CABEÇALHO DAS SEÇÕES
+============================================================ */
+
+main > section > header {
+    margin-bottom: var(--espaco-6);
+}
+
+
+main > section > header h2 {
+    position: relative;
+
+    margin-top: 0;
+
+    font-size:
+        clamp(
+            1.8rem,
+            5vw,
+            2.8rem
+        );
+
+    line-height: 1.1;
+
+    letter-spacing: -0.04em;
+}
+
+
+main > section > header h2::after {
+    content: "";
+
+    display: block;
+
+    width: 4rem;
+    height: 0.3rem;
+
+    margin-top: var(--espaco-3);
+
+    background: var(--gradiente-principal);
+
+    border-radius: 999px;
+}
+
+
+main > section > header p {
+    color: var(--cor-texto-suave);
+
+    font-size: 1.05rem;
+}
+
+
+/* ============================================================
+   10. HR DECORATIVO
+============================================================ */
+
+main > hr {
+    height: 1px;
+
+    margin-block: var(--espaco-7);
+
+    border: 0;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            var(--cor-borda),
+            transparent
+        );
+}
+
+
+/* ============================================================
+   11. SEÇÃO SOBRE
+============================================================ */
+
+#sobre figure {
+    float: right;
+
+    width:
+        min(
+            18rem,
+            45%
+        );
+
+    margin:
+        0
+        0
+        var(--espaco-5)
+        var(--espaco-6);
+}
+
+
+#sobre figure img {
+    width: 100%;
+
+    aspect-ratio: 1;
+
+    object-fit: cover;
+
+    border-radius:
+        40%
+        60%
+        55%
+        45%
+        /
+        55%
+        40%
+        60%
+        45%;
+
+    box-shadow: var(--sombra-media);
+
+    transition:
+        border-radius 500ms ease,
+        transform 500ms ease;
+}
+
+
+#sobre figure:hover img {
+    border-radius: 50%;
+
+    transform: rotate(2deg) scale(1.02);
+}
+
+
+figcaption {
+    margin-top: var(--espaco-2);
+
+    color: var(--cor-texto-suave);
+
+    font-size: 0.85rem;
+
+    text-align: center;
+}
+
+
+/* ============================================================
+   12. ELEMENTOS INLINE
+============================================================ */
+
+mark {
+    padding:
+        0.15em
+        0.35em;
+
+    color: inherit;
+
+    background:
+        linear-gradient(
+            120deg,
+            #fef08a,
+            #fde047
+        );
+
+    border-radius: 0.25rem;
+}
+
+
+abbr[title] {
+    text-decoration:
+        underline
+        dotted
+        var(--cor-primaria);
+
+    text-underline-offset: 0.25em;
+
+    cursor: help;
+}
+
+
+del {
+    color: #9ca3af;
+
+    text-decoration-color: var(--cor-erro);
+}
+
+
+ins {
+    color: #166534;
+
+    text-decoration:
+        underline
+        wavy
+        var(--cor-sucesso);
+
+    text-underline-offset: 0.2rem;
+}
+
+
+small {
+    color: var(--cor-texto-suave);
+}
+
+
+data {
+    font-weight: 700;
+
+    color: var(--cor-primaria);
+}
+
+
+/* ============================================================
+   13. BLOCKQUOTE
+============================================================ */
+
+blockquote {
+    position: relative;
+
+    margin:
+        var(--espaco-6)
+        0;
+
+    padding:
+        var(--espaco-6)
+        var(--espaco-6)
+        var(--espaco-6)
+        4.5rem;
+
+    background: var(--gradiente-suave);
+
+    border-left:
+        5px solid
+        var(--cor-primaria);
+
+    border-radius: var(--raio-medio);
+}
+
+
+blockquote::before {
+    content: "“";
+
+    position: absolute;
+
+    top: 0;
+    left: 1rem;
+
+    font-family: Georgia, serif;
+
+    font-size: 6rem;
+
+    line-height: 1;
+
+    color:
+        rgb(79 70 229 / 0.18);
+}
+
+
+blockquote p {
+    font-size: 1.15rem;
+
+    font-style: italic;
+}
+
+
+blockquote footer {
+    color: var(--cor-texto-suave);
+}
+
+
+/* ============================================================
+   14. LISTAS
+============================================================ */
+
+main ul,
+main ol {
+    padding-left: 1.4rem;
+}
+
+
+main li {
+    margin-block: var(--espaco-2);
+}
+
+
+/*
+    ::marker personaliza o marcador da lista.
+*/
+
+main li::marker {
+    color: var(--cor-primaria);
+
+    font-weight: 800;
+}
+
+
+#projetos article ul li::marker {
+    content: "✓  ";
+
+    color: var(--cor-sucesso);
+}
+
+
+/* ============================================================
+   15. DESCRIPTION LIST
+============================================================ */
+
+dl {
+    display: grid;
+
+    grid-template-columns:
+        minmax(8rem, 0.35fr)
+        1fr;
+
+    gap:
+        var(--espaco-3)
+        var(--espaco-5);
+}
+
+
+dt {
+    font-weight: 800;
+
+    color: var(--cor-primaria);
+}
+
+
+dd {
+    margin: 0;
+
+    color: var(--cor-texto-suave);
+}
+
+
+/* ============================================================
+   16. ARTIGOS
+============================================================ */
+
+section article {
+    position: relative;
+
+    margin-block: var(--espaco-5);
+
+    padding: var(--espaco-5);
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fafc
+        );
+
+    border:
+        1px solid
+        var(--cor-borda);
+
+    border-radius: var(--raio-medio);
+
+    transition:
+        transform 250ms ease,
+        border-color 250ms ease,
+        box-shadow 250ms ease;
+}
+
+
+section article:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--cor-primaria-clara);
+
+    box-shadow: var(--sombra-media);
+}
+
+
+/*
+    nth-child é capaz de selecionar elementos
+    pela posição.
+*/
+
+#trajetoria article:nth-of-type(odd) {
+    border-left:
+        4px solid
+        var(--cor-primaria);
+}
+
+
+#trajetoria article:nth-of-type(even) {
+    border-left:
+        4px solid
+        var(--cor-secundaria);
+}
+
+
+/* ============================================================
+   17. LINHA DO TEMPO
+============================================================ */
+
+#trajetoria {
+    counter-reset: etapa;
+}
+
+
+#trajetoria article {
+    counter-increment: etapa;
+
+    padding-left: 4rem;
+}
+
+
+#trajetoria article::before {
+    content: counter(etapa);
+
+    position: absolute;
+
+    top: 1.4rem;
+    left: 1rem;
+
+    display: grid;
+
+    width: 2rem;
+    height: 2rem;
+
+    place-items: center;
+
+    color: white;
+
+    font-weight: 800;
+
+    background: var(--gradiente-principal);
+
+    border-radius: 50%;
+}
+
+
+/* ============================================================
+   18. CÓDIGOS
+============================================================ */
+
+code,
+kbd,
+samp {
+    font-family: var(--fonte-codigo);
+}
+
+
+code {
+    padding:
+        0.1em
+        0.35em;
+
+    color: #c026d3;
+
+    background: #f5f3ff;
+
+    border-radius: 0.3rem;
+}
+
+
+pre {
+    position: relative;
+
+    overflow-x: auto;
+
+    padding: var(--espaco-5);
+
+    color: #e5e7eb;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111827,
+            #020617
+        );
+
+    border:
+        1px solid #263249;
+
+    border-radius: var(--raio-medio);
+
+    box-shadow:
+        inset
+        0 1px 0
+        rgb(255 255 255 / 0.06);
+}
+
+
+pre::before {
+    content: "CÓDIGO";
+
+    position: absolute;
+
+    top: 0.5rem;
+    right: 0.7rem;
+
+    color: #94a3b8;
+
+    font:
+        700
+        0.65rem
+        var(--fonte-principal);
+
+    letter-spacing: 0.15em;
+}
+
+
+pre code {
+    padding: 0;
+
+    color: inherit;
+
+    background: transparent;
+}
+
+
+kbd {
+    display: inline-block;
+
+    padding:
+        0.35rem
+        0.55rem;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            #374151,
+            #111827
+        );
+
+    border:
+        1px solid #4b5563;
+
+    border-bottom-width: 3px;
+
+    border-radius: 0.4rem;
+
+    box-shadow:
+        0 2px 0 #030712;
+}
+
+
+/* ============================================================
+   19. TECNOLOGIAS COM DATA ATTRIBUTES
+============================================================ */
+
+/*
+    Aqui o CSS olha para atributos data-* do HTML.
+*/
+
+#tecnologias article[data-tecnologia]::after {
+    content:
+        attr(data-tecnologia)
+        " • "
+        attr(data-nivel);
+
+    position: absolute;
+
+    top: 1rem;
+    right: 1rem;
+
+    padding:
+        0.3rem
+        0.6rem;
+
+    color: var(--cor-texto-suave);
+
+    background: #f1f5f9;
+
+    border-radius: 999px;
+
+    font-size: 0.7rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+}
+
+
+#tecnologias article[data-tecnologia="python"] {
+    --cor-card: #3776ab;
+}
+
+
+#tecnologias article[data-tecnologia="html"] {
+    --cor-card: #e34f26;
+}
+
+
+#tecnologias article[data-tecnologia="css"] {
+    --cor-card: #1572b6;
+}
+
+
+#tecnologias article[data-tecnologia="flask"] {
+    --cor-card: #111827;
+}
+
+
+#tecnologias article[data-tecnologia="git"] {
+    --cor-card: #f05032;
+}
+
+
+#tecnologias article[data-tecnologia] {
+    border-top:
+        4px solid
+        var(--cor-card);
+}
+
+
+/* ============================================================
+   20. PROGRESS
+============================================================ */
+
+progress {
+    overflow: hidden;
+
+    width:
+        min(
+            100%,
+            32rem
+        );
+
+    height: 1rem;
+
+    border: 0;
+
+    border-radius: 999px;
+
+    background: #e5e7eb;
+}
+
+
+progress::-webkit-progress-bar {
+    background: #e5e7eb;
+
+    border-radius: 999px;
+}
+
+
+progress::-webkit-progress-value {
+    background: var(--gradiente-principal);
+
+    border-radius: 999px;
+}
+
+
+progress::-moz-progress-bar {
+    background: var(--gradiente-principal);
+
+    border-radius: 999px;
+}
+
+
+/* ============================================================
+   21. METER
+============================================================ */
+
+meter {
+    width:
+        min(
+            100%,
+            20rem
+        );
+
+    height: 1.2rem;
+
+    accent-color: var(--cor-sucesso);
+}
+
+
+/* ============================================================
+   22. DETAILS / SUMMARY
+============================================================ */
+
+details {
+    margin-block: var(--espaco-4);
+
+    border:
+        1px solid
+        var(--cor-borda);
+
+    border-radius: var(--raio-medio);
+
+    overflow: clip;
+
+    background: white;
+}
+
+
+summary {
+    position: relative;
+
+    padding:
+        var(--espaco-4)
+        3rem
+        var(--espaco-4)
+        var(--espaco-4);
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+    list-style: none;
+
+    background: #f8fafc;
+}
+
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+
+summary::after {
+    content: "+";
+
+    position: absolute;
+
+    top: 50%;
+    right: 1rem;
+
+    transform: translateY(-50%);
+
+    font-size: 1.5rem;
+
+    color: var(--cor-primaria);
+
+    transition: transform 200ms ease;
+}
+
+
+details[open] summary::after {
+    transform:
+        translateY(-50%)
+        rotate(45deg);
+}
+
+
+details > :not(summary) {
+    margin-inline: var(--espaco-4);
+}
+
+
+details[open] {
+    animation:
+        abrir-details
+        300ms ease;
+}
+
+
+@keyframes abrir-details {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ============================================================
+   23. PROJETOS COM GRID
+============================================================ */
+
+#projetos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap: var(--espaco-5);
+}
+
+
+#projetos > header {
+    grid-column: 1 / -1;
+}
+
+
+#projetos > article {
+    margin: 0;
+}
+
+
+#projetos > article:first-of-type {
+    grid-column: 1 / -1;
+}
+
+
+#projetos figure {
+    margin-inline: 0;
+}
+
+
+#projetos figure img {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    object-fit: cover;
+
+    border-radius: var(--raio-medio);
+
+    transition:
+        transform 400ms ease,
+        filter 400ms ease;
+}
+
+
+#projetos figure {
+    overflow: hidden;
+
+    border-radius: var(--raio-medio);
+}
+
+
+#projetos figure:hover img {
+    transform: scale(1.04);
+
+    filter:
+        saturate(1.15)
+        contrast(1.05);
+}
+
+
+/* ============================================================
+   24. TABELA
+============================================================ */
+
+table {
+    width: 100%;
+
+    margin-block: var(--espaco-5);
+
+    border-collapse: separate;
+
+    border-spacing: 0;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        var(--cor-borda);
+
+    border-radius: var(--raio-medio);
+}
+
+
+caption {
+    margin-bottom: var(--espaco-3);
+
+    font-size: 1.2rem;
+
+    font-weight: 800;
+
+    text-align: left;
+}
+
+
+th,
+td {
+    padding:
+        0.85rem
+        1rem;
+
+    text-align: left;
+
+    border-bottom:
+        1px solid
+        var(--cor-borda);
+}
+
+
+thead {
+    color: white;
+
+    background: var(--gradiente-principal);
+}
+
+
+tbody tr {
+    transition: background var(--transicao);
+}
+
+
+tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+
+tbody tr:hover {
+    background: #eef2ff;
+}
+
+
+tfoot {
+    font-weight: 800;
+
+    background: #f1f5f9;
+}
+
+
+tbody tr:last-child > * {
+    border-bottom: 0;
+}
+
+
+/* ============================================================
+   25. MULTIMÍDIA
+============================================================ */
+
+#multimidia img,
+#multimidia video,
+#multimidia iframe {
+    border-radius: var(--raio-medio);
+
+    box-shadow: var(--sombra-media);
+}
+
+
+#multimidia video,
+#multimidia iframe {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    border: 0;
+}
+
+
+#multimidia audio {
+    width: 100%;
+
+    max-width: 35rem;
+}
+
+
+/* ============================================================
+   26. FORMULÁRIOS
+============================================================ */
+
+form {
+    display: grid;
+
+    gap: var(--espaco-5);
+}
+
+
+fieldset {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+
+    gap:
+        var(--espaco-3)
+        var(--espaco-4);
+
+    margin: 0;
+
+    padding: var(--espaco-5);
+
+    border:
+        1px solid
+        var(--cor-borda);
+
+    border-radius: var(--raio-medio);
+
+    background:
+        linear-gradient(
+            145deg,
+            white,
+            #fbfcff
+        );
+}
+
+
+legend {
+    padding-inline: var(--espaco-2);
+
+    color: var(--cor-primaria);
+
+    font-size: 1.1rem;
+
+    font-weight: 800;
+}
+
+
+/*
+    :is() permite agrupar vários seletores.
+*/
+
+:is(
+    input,
+    select,
+    textarea
+):not(
+    [type="radio"],
+    [type="checkbox"],
+    [type="range"],
+    [type="color"],
+    [type="file"],
+    [type="hidden"]
+) {
+    width: 100%;
+
+    min-height: 2.8rem;
+
+    padding:
+        0.7rem
+        0.8rem;
+
+    color: var(--cor-texto);
+
+    background: white;
+
+    border:
+        1px solid
+        #cbd5e1;
+
+    border-radius: 0.6rem;
+
+    outline: 0;
+
+    transition:
+        border-color var(--transicao),
+        box-shadow var(--transicao),
+        transform var(--transicao);
+}
+
+
+/* ============================================================
+   27. PLACEHOLDER
+============================================================ */
+
+::placeholder {
+    color: #94a3b8;
+
+    opacity: 1;
+}
+
+
+/* ============================================================
+   28. FOCUS
+============================================================ */
+
+:is(
+    input,
+    select,
+    textarea,
+    button,
+    a
+):focus-visible {
+    outline:
+        3px solid
+        rgb(99 102 241 / 0.35);
+
+    outline-offset: 3px;
+}
+
+
+:is(
+    input,
+    select,
+    textarea
+):focus {
+    border-color: var(--cor-primaria);
+
+    box-shadow:
+        0 0 0 4px
+        rgb(99 102 241 / 0.10);
+}
+
+
+/* ============================================================
+   29. FORMULÁRIO VÁLIDO / INVÁLIDO
+============================================================ */
+
+/*
+    :not(:placeholder-shown) evita deixar campos vazios
+    vermelhos imediatamente.
+
+    Funciona especialmente bem em campos com placeholder.
+*/
+
+input:required:not(:placeholder-shown):valid,
+textarea:required:not(:placeholder-shown):valid {
+    border-color: var(--cor-sucesso);
+}
+
+
+input:required:not(:placeholder-shown):invalid,
+textarea:required:not(:placeholder-shown):invalid {
+    border-color: var(--cor-erro);
+}
+
+
+/* ============================================================
+   30. READONLY E DISABLED
+============================================================ */
+
+input:read-only {
+    background: #f1f5f9;
+
+    color: #64748b;
+}
+
+
+input:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.55;
+
+    background: #e5e7eb;
+}
+
+
+/* ============================================================
+   31. RADIO E CHECKBOX
+============================================================ */
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 1.15rem;
+    height: 1.15rem;
+
+    accent-color: var(--cor-primaria);
+}
+
+
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label {
+    color: var(--cor-primaria);
+
+    font-weight: 700;
+}
+
+
+/*
+    Demonstração moderna com :has().
+
+    O li muda se possuir checkbox marcado.
+*/
+
+#metas li:has(input:checked) {
+    color: var(--cor-sucesso);
+
+    text-decoration: line-through;
+}
+
+
+/* ============================================================
+   32. RANGE
+============================================================ */
+
+input[type="range"] {
+    accent-color: var(--cor-primaria);
+}
+
+
+/* ============================================================
+   33. COLOR PICKER
+============================================================ */
+
+input[type="color"] {
+    width: 4rem;
+    height: 3rem;
+
+    padding: 0.2rem;
+
+    border:
+        1px solid
+        var(--cor-borda);
+
+    border-radius: 0.6rem;
+
+    background: white;
+}
+
+
+/* ============================================================
+   34. FILE INPUT
+============================================================ */
+
+input[type="file"] {
+    padding: var(--espaco-2);
+
+    border:
+        2px dashed
+        #cbd5e1;
+
+    border-radius: var(--raio-pequeno);
+
+    background: #f8fafc;
+}
+
+
+input[type="file"]::file-selector-button {
+    margin-right: var(--espaco-3);
+
+    padding:
+        0.6rem
+        0.9rem;
+
+    color: white;
+
+    background: var(--cor-primaria);
+
+    border: 0;
+
+    border-radius: var(--raio-pequeno);
+
+    cursor: pointer;
+}
+
+
+/* ============================================================
+   35. BOTÕES
+============================================================ */
+
+button {
+    position: relative;
+
+    overflow: hidden;
+
+    min-height: 2.8rem;
+
+    padding:
+        0.75rem
+        1.2rem;
+
+    color: white;
+
+    background: var(--gradiente-principal);
+
+    border: 0;
+
+    border-radius: 0.7rem;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 8px 20px
+        rgb(79 70 229 / 0.20);
+
+    transition:
+        transform 150ms ease,
+        box-shadow 150ms ease,
+        filter 150ms ease;
+}
+
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px
+        rgb(79 70 229 / 0.28);
+
+    filter: brightness(1.07);
+}
+
+
+button:active {
+    transform: translateY(1px);
+
+    box-shadow:
+        0 3px 8px
+        rgb(79 70 229 / 0.20);
+}
+
+
+button[type="reset"] {
+    color: var(--cor-texto);
+
+    background: white;
+
+    border:
+        1px solid
+        var(--cor-borda);
+
+    box-shadow: none;
+}
+
+
+/* ============================================================
+   36. EFEITO DE BRILHO NO BOTÃO
+============================================================ */
+
+button[type="submit"]::after {
+    content: "";
+
+    position: absolute;
+
+    top: -100%;
+    left: -40%;
+
+    width: 30%;
+    height: 300%;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            rgb(255 255 255 / 0.4),
+            transparent
+        );
+
+    transform: rotate(25deg);
+
+    transition: left 500ms ease;
+}
+
+
+button[type="submit"]:hover::after {
+    left: 120%;
+}
+
+
+/* ============================================================
+   37. FORMULÁRIO BUSCAR VOOS
+============================================================ */
+
+#voos form {
+    padding: var(--espaco-5);
+
+    background: var(--gradiente-suave);
+
+    border-radius: var(--raio-grande);
+}
+
+
+/* ============================================================
+   38. FORMULÁRIO CONTATO
+============================================================ */
+
+#contato form {
+    max-width: 60rem;
+
+    margin-inline: auto;
+}
+
+
+#contato textarea {
+    grid-column: 1 / -1;
+
+    min-height: 10rem;
+}
+
+
+/* ============================================================
+   39. CONTENTEDITABLE
+============================================================ */
+
+[contenteditable="true"] {
+    min-height: 6rem;
+
+    padding: var(--espaco-4);
+
+    background:
+        repeating-linear-gradient(
+            white,
+            white 1.8rem,
+            #e2e8f0 1.85rem
+        );
+
+    border:
+        2px dashed
+        var(--cor-primaria-clara);
+
+    border-radius: var(--raio-medio);
+
+    outline: 0;
+}
+
+
+[contenteditable="true"]:focus {
+    border-style: solid;
+
+    box-shadow:
+        0 0 0 5px
+        rgb(99 102 241 / 0.10);
+}
+
+
+/* ============================================================
+   40. FAQ
+============================================================ */
+
+#faq details {
+    transition:
+        border-color var(--transicao),
+        box-shadow var(--transicao);
+}
+
+
+#faq details:has(summary:hover) {
+    border-color: var(--cor-primaria-clara);
+}
+
+
+#faq details[open] {
+    box-shadow: var(--sombra-pequena);
+}
+
+
+/* ============================================================
+   41. ASIDE
+============================================================ */
+
+body > aside {
+    width:
+        min(
+            calc(100% - 2rem),
+            var(--largura-site)
+        );
+
+    margin:
+        0 auto
+        var(--espaco-7);
+
+    padding:
+        var(--espaco-6);
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #111827,
+            #1e1b4b
+        );
+
+    border-radius: var(--raio-grande);
+
+    box-shadow: var(--sombra-media);
+}
+
+
+body > aside a {
+    color: #a5f3fc;
+}
+
+
+/* ============================================================
+   42. FOOTER PRINCIPAL
+============================================================ */
+
+body > footer {
+    padding:
+        var(--espaco-7)
+        max(
+            1rem,
+            calc(
+                (100vw - var(--largura-site)) / 2
+            )
+        );
+
+    color: #cbd5e1;
+
+    background: #020617;
+
+    text-align: center;
+}
+
+
+body > footer nav ul {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: var(--espaco-4);
+
+    padding: 0;
+
+    list-style: none;
+}
+
+
+body > footer a {
+    color: #c7d2fe;
+
+    text-decoration: none;
+}
+
+
+body > footer a:hover {
+    color: white;
+
+    text-decoration: underline;
+}
+
+
+/* ============================================================
+   43. LINKS EXTERNOS
+
+   Seleciona links cujo href começa com https.
+============================================================ */
+
+a[href^="https://"]::after {
+    content: " ↗";
+
+    font-size: 0.75em;
+}
+
+
+/*
+    Mas retiramos o símbolo de alguns lugares
+    onde ele poderia ficar visualmente estranho.
+*/
+
+body > header a[href^="https://"]::after {
+    content: none;
+}
+
+
+/* ============================================================
+   44. LINKS DE EMAIL
+============================================================ */
+
+a[href^="mailto:"] {
+    text-decoration:
+        underline
+        dotted;
+
+    text-underline-offset: 0.25rem;
+}
+
+
+/* ============================================================
+   45. SELETOR :IS()
+============================================================ */
+
+:is(
+    h1,
+    h2,
+    h3,
+    h4
+) {
+    text-wrap: balance;
+}
+
+
+/* ============================================================
+   46. SELETOR :WHERE()
+
+   :where() possui especificidade zero.
+============================================================ */
+
+:where(
+    article,
+    section,
+    aside
+) > :first-child {
+    margin-top: 0;
+}
+
+
+/* ============================================================
+   47. SELETOR :NOT()
+============================================================ */
+
+main a:not(
+    [href^="http"]
+):hover {
+    text-decoration-thickness: 2px;
+
+    text-underline-offset: 0.25rem;
+}
+
+
+/* ============================================================
+   48. ANIMAÇÃO NOS CARDS
+============================================================ */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px)
+            scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+main > section {
+    animation:
+        aparecer
+        600ms
+        both;
+}
+
+
+/*
+    Pequenos delays.
+*/
+
+main > section:nth-of-type(2) {
+    animation-delay: 50ms;
+}
+
+
+main > section:nth-of-type(3) {
+    animation-delay: 100ms;
+}
+
+
+/* ============================================================
+   49. TRANSFORMAÇÃO 3D
+============================================================ */
+
+#tecnologias article {
+    transform-style: preserve-3d;
+
+    perspective: 1000px;
+}
+
+
+#tecnologias article:hover h3 {
+    transform: translateZ(20px);
+
+    color: var(--cor-card);
+}
+
+
+#tecnologias article h3 {
+    transition:
+        transform 250ms ease,
+        color 250ms ease;
+}
+
+
+/* ============================================================
+   50. SCROLL SNAP
+
+   Demonstração discreta.
+============================================================ */
+
+#tecnologias {
+    scroll-snap-type: y proximity;
+}
+
+
+#tecnologias article {
+    scroll-snap-align: start;
+}
+
+
+/* ============================================================
+   51. CSS MODERNO: color-mix()
+============================================================ */
+
+#artigos article:hover {
+    background:
+        color-mix(
+            in srgb,
+            white 92%,
+            var(--cor-primaria)
+        );
+}
+
+
+/* ============================================================
+   52. CSS MODERNO: :has()
+
+   Se um details estiver aberto dentro de um artigo,
+   o artigo inteiro recebe destaque.
+============================================================ */
+
+article:has(details[open]) {
+    border-color:
+        var(--cor-primaria);
+
+    box-shadow:
+        0 0 0 3px
+        rgb(99 102 241 / 0.08);
+}
+
+
+/* ============================================================
+   53. CONTAINER QUERY
+
+   Diferente de @media.
+
+   @media olha para o tamanho da tela.
+   @container olha para o tamanho do elemento.
+============================================================ */
+
+@container secao (max-width: 650px) {
+
+    fieldset {
+        grid-template-columns: 1fr;
+    }
+
+    dl {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ============================================================
+   54. @SUPPORTS
+
+   Só aplica caso o navegador suporte backdrop-filter.
+============================================================ */
+
+@supports (
+    backdrop-filter: blur(10px)
+) {
+
+    body > header nav {
+        background:
+            rgb(255 255 255 / 0.08);
+
+        backdrop-filter:
+            blur(18px)
+            saturate(150%);
+    }
+
+}
+
+
+/* ============================================================
+   55. RESPONSIVIDADE — TABLET
+============================================================ */
+
+@media (max-width: 900px) {
+
+    #projetos {
+        grid-template-columns: 1fr;
+    }
+
+
+    #projetos > article:first-of-type {
+        grid-column: auto;
+    }
+
+
+    fieldset {
+        grid-template-columns: 1fr;
+    }
+
+
+    table {
+        display: block;
+
+        overflow-x: auto;
+
+        white-space: nowrap;
+    }
+
+
+    #sobre figure {
+        float: none;
+
+        width:
+            min(
+                100%,
+                20rem
+            );
+
+        margin:
+            0 auto
+            var(--espaco-5);
+    }
+
+}
+
+
+/* ============================================================
+   56. RESPONSIVIDADE — CELULAR
+============================================================ */
+
+@media (max-width: 600px) {
+
+    :root {
+        --raio-grande: 1rem;
+    }
+
+
+    body > header {
+        padding-inline: 1rem;
+    }
+
+
+    body > header nav ul {
+        flex-direction: column;
+    }
+
+
+    body > header nav a {
+        width: 100%;
+    }
+
+
+    main {
+        width:
+            min(
+                100% - 1rem,
+                var(--largura-site)
+            );
+
+        padding-block: var(--espaco-4);
+    }
+
+
+    main > section {
+        padding: var(--espaco-4);
+    }
+
+
+    #trajetoria article {
+        padding-left: var(--espaco-5);
+    }
+
+
+    #trajetoria article::before {
+        position: static;
+
+        margin-bottom: var(--espaco-3);
+    }
+
+
+    blockquote {
+        padding:
+            var(--espaco-5);
+    }
+
+
+    blockquote::before {
+        display: none;
+    }
+
+
+    dl {
+        grid-template-columns: 1fr;
+    }
+
+
+    dd {
+        margin-bottom: var(--espaco-3);
+    }
+
+
+    body > footer nav ul {
+        flex-direction: column;
+    }
+
+}
+
+
+/* ============================================================
+   57. TELAS MUITO GRANDES
+============================================================ */
+
+@media (min-width: 1500px) {
+
+    :root {
+        --largura-site: 85rem;
+    }
+
+}
+
+
+/* ============================================================
+   58. MODO ESCURO AUTOMÁTICO
+
+   Se o sistema operacional estiver em modo escuro.
+============================================================ */
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --cor-fundo: #070b14;
+        --cor-superficie: #101624;
+        --cor-superficie-2: #151c2e;
+
+        --cor-texto: #e5e7eb;
+        --cor-texto-suave: #9ca3af;
+
+        --cor-borda: #273247;
+    }
+
+
+    body {
+        background:
+            radial-gradient(
+                circle at top left,
+                rgb(79 70 229 / 0.15),
+                transparent 35rem
+            ),
+            var(--cor-fundo);
+    }
+
+
+    main > section,
+    section article,
+    details,
+    fieldset {
+        background: var(--cor-superficie);
+    }
+
+
+    section article {
+        background:
+            linear-gradient(
+                145deg,
+                #101624,
+                #0c111c
+            );
+    }
+
+
+    summary {
+        background: #151c2e;
+    }
+
+
+    tbody tr:nth-child(even),
+    tfoot {
+        background: #111827;
+    }
+
+
+    tbody tr:hover {
+        background: #1e293b;
+    }
+
+
+    :is(
+        input,
+        select,
+        textarea
+    ):not(
+        [type="radio"],
+        [type="checkbox"],
+        [type="range"],
+        [type="color"],
+        [type="file"],
+        [type="hidden"]
+    ) {
+        color: var(--cor-texto);
+
+        background: #0f172a;
+
+        border-color: #334155;
+    }
+
+
+    code {
+        background: #1e1b4b;
+    }
+
+}
+
+
+/* ============================================================
+   59. ACESSIBILIDADE:
+   REDUZ ANIMAÇÕES CASO O USUÁRIO PEÇA ISSO
+============================================================ */
+
+@media (
+    prefers-reduced-motion: reduce
+) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
+
+        transition-duration:
+            0.01ms !important;
+    }
+
+}
+
+
+/* ============================================================
+   60. CSS PARA IMPRESSÃO
+
+   Ctrl + P para testar.
+============================================================ */
+
+@media print {
+
+    body {
+        color: black;
+
+        background: white;
+
+        font-size: 11pt;
+    }
+
+
+    body > header {
+        color: black;
+
+        background: none;
+    }
+
+
+    body > header nav,
+    body > footer nav,
+    button,
+    audio,
+    video,
+    iframe,
+    form {
+        display: none;
+    }
+
+
+    main,
+    body > aside {
+        width: 100%;
+
+        margin: 0;
+
+        padding: 0;
+    }
+
+
+    main > section {
+        break-inside: avoid;
+
+        color: black;
+
+        background: white;
+
+        box-shadow: none;
+
+        border:
+            1px solid
+            #bbb;
+    }
+
+
+    a {
+        color: black;
+
+        text-decoration: underline;
+    }
+
+
+    /*
+        Na impressão, mostra o endereço do link.
+    */
+
+    a[href^="http"]::after {
+        content:
+            " (" attr(href) ")";
+
+        font-size: 0.8em;
+    }
+
 }
